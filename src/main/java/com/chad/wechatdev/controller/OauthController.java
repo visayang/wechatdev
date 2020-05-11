@@ -47,12 +47,14 @@ public class OauthController {
         logger.info(state);
 
         User user = userService.saveWeChatUser(code, weChatConfig.getAppId(), weChatConfig.getSecret());
-
+        //判断是否取到用户信息  
         if (user == null) {
+            //获取失败 返回失败信息到 error.html
             logger.info("获取用户信息失败");
             model.addAttribute("msg", "获取用户信息失败");
             return "error";
         } else {
+            //true 储存到session中，并传值到index.html
             request.getSession().setAttribute("user", user.getName());
             request.getSession().setAttribute("image", user.getHeadImg());
 
