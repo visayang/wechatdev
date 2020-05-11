@@ -3,6 +3,8 @@ Springboot微信公众号开发
 # 微信公众号开发 
 ## 公众号开发 集成SpringBoot 便捷开发(前后端)
 
+![demo 示例图](https://raw.githubusercontent.com/visayang/wechatdev/master/img/%E5%BE%AE%E4%BF%A1%E6%8E%88%E6%9D%83.jpg)
+
 ### 涵盖：
 1. 微信公众号环境搭建 校验 接受转发信息。 **具体请看 VerificationController 相关**
 2. 微信公众号授权用户  [获取用户基本信息](https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxfe8c41dc9dfadc85&redirect_uri=Url.Encode(usercodeinterface)&response_type=code&scope=snsapi_userinfo&state=testtest&connect_redirect=1#wechat_redirect) **具体请看 OauthController 相关**
