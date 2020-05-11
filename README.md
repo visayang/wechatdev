@@ -3,7 +3,7 @@ Springboot微信公众号开发
 # 微信公众号开发 
 ## 公众号开发 集成SpringBoot 便捷开发(前后端)
 
-![demo 示例图](https://mmbiz.qpic.cn/mmbiz_jpg/o5kXhWjqLoJFsEiaAhsicn98Mw5JXNkeLRg4R3XFNxstyhcZRayfjYOVU0Lem1RwO1yS9wSjNA40AnAaCDhdh7UQ/0?wx_fmt=jpeg)
+![demo 示例图](./img/微信授权.jpg)
 
 ### 涵盖：
 1. 微信公众号环境搭建 校验 接受转发信息。 **具体请看 VerificationController 相关**
