@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  use-forward-headers: true
+spring:
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    cache: false
+    suffix: .html
+  devtools:
+    restart:
+      enabled: true
+
+#微信的配置换成开发的或者测试账号
+wechat:
+  mp:
+    appid:
+    secret:
+    token:
+    aesKey:
+
+
+
+ #支付回调
+  pay:
+    url: https://

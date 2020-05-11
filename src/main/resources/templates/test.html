@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta charset="UTF-8">
+    <title>我是页面二</title>
+    <meta name="description" content="Ajax 访问后台接口，Get 和 Post 方式两种">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <script src="/js/jquery-2.1.4.min.js" ></script>
+    <script type="text/javascript"
+            src="/js/jquery.json-2.4.min.js"></script>
+</head>
+<body style="background-color: lightskyblue">
+<script language="javaScript">
+
+    $(function () {
+        $("#exchange").unbind("click").bind("click", function () {
+            //post 传过去json
+            // var userg={};
+            // userg.phone = "1761217329*";
+            // $user = $.toJSON(userg);
+
+            $.ajax({
+                type: "GET",	//GET,POST    (PUT 或其它方式也有，不同浏览器兼容不同)
+                url: '/testget',		//请求的地址，string类型
+                data:{'key': new Date().getTime().toString(36)},
+                contentType: "application/json; charset=UTF-8",
+                async: true,			//异步，从complete 回调
+                dataType: "json",		//设置返回的数据类型，如果是json  字符串，设置了后 返回responseJSON，是json对象
+
+                success: function (data) {
+                    console.log(data);
+
+                    //alert(data);
+
+                    //if (data.code == "00") {
+//
+                   // }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+                }
+            });
+        })
+    })
+</script>
+
+
+<h1 style="margin-top:100px;text-align: center;font-size: 35px">index页面传来的值</h1>
+<p style="margin-top:100px;text-align: center;font-size: 65px" th:text="${value}"></p>
+
+
+<a id="exchange" href="javascript:void(0)"
+   style="color: white;margin-top: 100px;margin-left: 350px">
+    <button type="button"
+            class=""
+            style="border-radius:15px;background-color:#FFB800 ;font-family:'微软雅黑';font-size:1.2rem;padding: 0px 35px 0px 35px;width: 300px;height: 80px">
+        Ajax请求数据
+    </button>
+</a>
+
+</body>
+</html>
